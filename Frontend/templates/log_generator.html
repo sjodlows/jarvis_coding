@@ -1278,8 +1278,12 @@
         });
 
         // Generate Trace ID button for scenarios
-        const genTraceIdBtnScenario = document.getElementById('gen-trace-id');
-        const traceIdInput = document.getElementById('trace-id');
+        //const genTraceIdBtnScenario = document.getElementById('gen-trace-id');
+        if (!window.genTraceIdBtn) {
+  		window.genTraceIdBtn = document.getElementById("gen-trace-id");
+	}
+
+	const traceIdInput = document.getElementById('trace-id');
         
         if (genTraceIdBtnScenario && traceIdInput) {
             genTraceIdBtnScenario.addEventListener('click', () => {
