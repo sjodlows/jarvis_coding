@@ -1285,6 +1285,11 @@
 
 	const traceIdInput = document.getElementById('trace-id');
         
+	if (!window.genTraceIdBtnScenario) {
+    		window.genTraceIdBtnScenario = document.getElementById("gen-trace-id-scenario");
+	}
+	const genTraceIdBtnScenario = window.genTraceIdBtnScenario;
+
         if (genTraceIdBtnScenario && traceIdInput) {
             genTraceIdBtnScenario.addEventListener('click', () => {
                 const guid = crypto.randomUUID();
